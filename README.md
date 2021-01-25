@@ -57,7 +57,7 @@ tdudgeon/nginx-dockerfile          latest              553a014fa1e6        13 mi
 380MB compared with 204MB for the base image. Nginx has added 176MB.
 
 
-## Build centos from Dockerfle using buildah
+## Build nginx from Dockerfle using buildah
 ```
 $ sudo buildah bud .
 STEP 1: FROM centos:7
@@ -79,6 +79,7 @@ Storing signatures
 ```
 
 ## Build centos container with buildah
+See the [buildah-centos.sh]() script.
 ```
 $ sudo ./buildah-centos.sh 
 ++ buildah from scratch
@@ -98,6 +99,7 @@ Storing signatures
 ```
 
 ## Build nginx container with buildah
+See the [buildah-nginx.sh]() script.
 ```
 $ sudo ./buildah-nginx.sh 
 ++ buildah from scratch
@@ -125,9 +127,9 @@ docker.io/tdudgeon/centos-nginx    latest              d443902b2cbf        About
 docker.io/tdudgeon/centos-base     latest              8c1c8690959d        About an hour ago   56.6 MB
 ```
 
-The minimal centos7 image contianing only the `bash` and `coreutils` is 56.6 MB compared to the image on DockerHub which is 204 MB.
+The minimal centos7 image containing only the `bash` and `coreutils` is 56.6 MB compared to the image on DockerHub which is 204 MB.
 
-The minimal nginx image is 235 MB compared to 380 MB.
+The minimal nginx image is 235 MB compared to 380 MB for the one built from the Dockerfile.
 
 ## Does it run?
 No use building a small image if it doesn't run.
@@ -136,6 +138,6 @@ $ docker run -p 80:80 -d --rm tdudgeon/centos-nginx
 ```
 
 Then access it. You get a `403 Forbidden` error but it comes from nginx!
-That's because we provided no content of configuration.
+That's because we provided no content or configuration.
 The same is seen for the version built from the Dockerfile.
 
