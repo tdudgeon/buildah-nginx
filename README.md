@@ -119,6 +119,11 @@ Writing manifest to image destination
 Storing signatures
 d443902b2cbf38d575229de004d163434323222aab14526057aac5c7814f22f6
 ```
+## Make the buildah images available to Docker
+```
+sudo buildah push tdudgeon/centos-base docker-daemon:tdudgeon/centos-base:latest
+sudo buildah push tdudgeon/centos-nginx docker-daemon:tdudgeon/centos-nginx:latest
+```
 
 ## What is the impact?
 ```
