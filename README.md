@@ -2,7 +2,7 @@
 
 This repo is a follow up to this [blog post](https://www.informaticsmatters.com/blog/2018/05/31/smaller-containers-part-3.html).
 
-For information on buildah look at [](https://buildah.io/).
+For information on buildah look at [https://buildah.io/](https://buildah.io/).
 
 
 ## Environment
