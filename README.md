@@ -34,6 +34,7 @@ docker.io/centos                   7                   8652b9f0cb4c        2 mon
 
 
 ## Build nginx container with Docker
+Using this [Dockerfile](Dockerfile).
 ```
 $ docker build -t tdudgeon/nginx-dockerfile .
 Sending build context to Docker daemon  12.8 kB
@@ -79,7 +80,7 @@ Storing signatures
 ```
 
 ## Build centos container with buildah
-See the [buildah-centos.sh]() script.
+See the [buildah-centos.sh](buildah-centos.sh) script.
 ```
 $ sudo ./buildah-centos.sh 
 ++ buildah from scratch
@@ -99,7 +100,7 @@ Storing signatures
 ```
 
 ## Build nginx container with buildah
-See the [buildah-nginx.sh]() script.
+See the [buildah-nginx.sh](buildah-nginx.sh) script.
 ```
 $ sudo ./buildah-nginx.sh 
 ++ buildah from scratch
